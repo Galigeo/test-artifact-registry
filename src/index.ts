@@ -1,4 +1,5 @@
 import express = require('express');
+import { checkAuth } from '@galigeo-store/auth-lib/dist';
 
 const port = Number(process.env.PORT) || 5000;
 
@@ -7,6 +8,6 @@ app.enable('trust proxy');
 
 console.log('Starting server on port ' + port);
 
-const server = app.use('/', (req, res, next) => {
+const server = app.use('/', checkAuth, (req, res, next) => {
     res.status(200).send('Alive test');
 }).listen(port);

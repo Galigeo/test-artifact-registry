@@ -15,11 +15,12 @@
   "author": "Galigeo",
   "license": "UNLICENSE",
   "dependencies": {
+    "@galigeo-store/auth-lib": "^0.0.5",
     "express": "^4.18.2",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
-    "typescript": "^5.0.0"
+    "typescript": "^5.1.3"
   }
 }
