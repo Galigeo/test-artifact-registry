@@ -1,0 +1,25 @@
+{
+  "name": "test-artifactregistry",
+  "version": "0.0.1",
+  "description": "Quick test import dependencies from Google Artifact Registry",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "dev": "npx ts-node src/index.ts",
+    "build": "npx -p typescript tsc",
+    "gcp-build": "tsc -p .",
+    "deploy": "gcloud config set project retail-poi-service && gcloud app deploy",
+    "login": "npx artifactregistry-auth",
+    "preinstall": "npm run login"
+  },
+  "author": "Galigeo",
+  "license": "UNLICENSE",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "typescript": "^5.0.0"
+  }
+}
