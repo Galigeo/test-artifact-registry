@@ -15,9 +15,10 @@
   "author": "Galigeo",
   "license": "UNLICENSE",
   "dependencies": {
-    "@galigeo-store/auth-lib": "^0.0.5",
+    "@galigeo-store/shared-models": "^0.0.3-beta",
     "express": "^4.18.2",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "typeorm": "^0.3.17"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",

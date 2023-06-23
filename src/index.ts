@@ -1,13 +1,6 @@
-import express = require('express');
-import { checkAuth } from '@galigeo-store/auth-lib/dist';
 
-const port = Number(process.env.PORT) || 5000;
+import { POI } from "@galigeo-store/shared-models/dist/db";
 
-const app = express();
-app.enable('trust proxy');
+console.log('POI comes from artifact registry');
+const poi = new POI();
 
-console.log('Starting server on port ' + port);
-
-const server = app.use('/', checkAuth, (req, res, next) => {
-    res.status(200).send('Alive test');
-}).listen(port);
