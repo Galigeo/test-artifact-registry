@@ -10,12 +10,14 @@
     "prebuild": "npm run login",
     "build": "echo running builld && tsc -p .",
     "gcp-build": "echo running gcp-build && tsc -p .",
-    "deploy": "gcloud config set project retail-poi-service && gcloud app deploy"
+    "deploy": "gcloud config set project retail-poi-service && gcloud app deploy",
+    "login": "npx artifactregistry-auth",
+    "preinstall": "npm run login && npm run artifactregistry-login",
+    "prepare": "npm run login"
   },
   "author": "Galigeo",
   "license": "UNLICENSE",
   "dependencies": {
-    "@galigeo-store/auth-lib": "^0.0.6-beta",
     "@galigeo-store/shared-models": "^0.0.4-beta",
     "express": "^4.18.2"
   },
